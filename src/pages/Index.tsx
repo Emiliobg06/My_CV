@@ -1,9 +1,8 @@
-'use client';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection';
-//import ContactSection from '@/components/ContactSection';
+import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -14,6 +13,7 @@ const Index = () => {
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>
