@@ -2,7 +2,7 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  //const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-secondary text-secondary-foreground py-12">

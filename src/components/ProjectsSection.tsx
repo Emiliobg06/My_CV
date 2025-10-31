@@ -51,7 +51,7 @@ const ProjectsSection = () => {
     }
   ];
 
-  const categories = ['All', 'Machine Learning', 'Deep Learning', 'Data Visualization', 'Recommender Systems'];
+  //const categories = ['All', 'Machine Learning', 'Deep Learning', 'Data Visualization', 'Recommender Systems'];
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-b">
