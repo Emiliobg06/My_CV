@@ -74,11 +74,11 @@ const ContactSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            Let's Connect
+            Lets Connect
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Interested in collaboration, have a data science project in mind, or want to discuss 
-            opportunities? I'd love to hear from you. Let's turn your data into insights.
+            opportunities? I would love to hear from you. Lets turn your data into insights.
           </p>
         </div>
 
@@ -147,7 +147,7 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="text-2xl">Send a Message</CardTitle>
                 <CardDescription>
-                  Fill out the form below and I'll get back to you as soon as possible.
+                  Fill out the form below and I will get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>

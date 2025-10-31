@@ -35,7 +35,7 @@ const AboutSection = () => {
               About Me
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              I'm a passionate computer scientist with a year of experience with projects in machine learning, data analysis, 
+              I am a passionate computer scientist with a year of experience with projects in machine learning, data analysis, 
               and software development. I have some other projects done with community service, scholarships and school projects.
             </p>
           </div>
