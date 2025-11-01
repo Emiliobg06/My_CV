@@ -5,7 +5,7 @@ const AboutSection = () => {
   const skills = [
     "Python", "R", "SQL","Scikit-learn",
     "Pandas", "NumPy", "Matplotlib", "Seaborn", "Docker", "AWS", "Azure", "Git",
-    "Machine Learning", "Statistical Analysis", "Data Mining", "Frontend Development",
+    "Machine Learning", "Statistical Analysis", "Data Mining", "Frontend Development","React", "Power BI", "Power Apps"
   ];
 
   const experiences = [

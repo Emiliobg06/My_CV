@@ -7,8 +7,8 @@ import { ExternalLink, Github, BarChart3, ChartScatter, TrendingUp, Dice5 } from
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'NLP Engineer (Research Project)',
-      description: 'A scholarship service I participated in during my third semester, where I learned how to do Multilabel Classification predictions with Sickitlearn in Python. The project was about predicting professor evaluations done in ITESM.',
+      title: 'NLP Research Project',
+      description: 'A scholarship service I participated in during my third semester, where I learned how to do Multilabel Classification predictions with Scikitlearn in Python. The project was about predicting professor evaluations done in ITESM.',
       icon: TrendingUp,
       technologies: ['Python', 'Scikit-learn', 'Pandas','NumPy'],
       metrics: ['94% Accuracy', '22% Churn Reduction', '50ms Response Time'],
@@ -35,7 +35,7 @@ const ProjectsSection = () => {
       metrics: ['35% Better Accuracy', '12 Regions', 'Real-time Updates'],
       category: 'Data Visualization',
       featured: false,
-      vp: "/NLP for Student Evaluations.pdf",
+      vp: "/Vehicle Fuel Data Extraction.pdf",
       git: "https://github.com/Emiliobg06/Cars_inv"
     },
     {
@@ -63,7 +63,7 @@ const ProjectsSection = () => {
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             A showcase of my data science projects demonstrating expertise in machine learning, 
-            statistical modeling, and data-driven solutions across various domains.
+            statistical modeling, and full-stack development.
           </p>
         </div>
 
