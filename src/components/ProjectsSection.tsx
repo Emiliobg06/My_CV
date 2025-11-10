@@ -8,7 +8,7 @@ const ProjectsSection = () => {
   const projects = [
     {
       title: 'NLP Research Project',
-      description: 'A scholarship service I participated in during my third semester, where I learned how to do Multilabel Classification predictions with Scikitlearn in Python. The project was about predicting professor evaluations done in ITESM.',
+      description: 'A scholarship service I participated in during my third semester, where I learned how to do Multilabel Classification predictions with Scikitlearn in Python. The goal was to predict professor evaluation outcomes at ITESM based on student feedback data.',
       icon: TrendingUp,
       technologies: ['Python', 'Scikit-learn', 'Pandas','NumPy'],
       metrics: ['94% Accuracy', '22% Churn Reduction', '50ms Response Time'],
@@ -40,14 +40,15 @@ const ProjectsSection = () => {
     },
     {
       title: 'Football Data Extraction',
-      description: 'Developed a data extraction and visualization project focused on analyzing player nationalities using data scraped from SofaScore. The project automates data collection with Python and BeautifulSoup, processes and cleans datasets with Pandas, and visualizes the distribution of nationalities across leagues using React.js.',
+      description: 'Developed a data extraction and visualization project focused on analyzing player nationalities using data scraped from SofaScore. The project automates data collection with Python and BeautifulSoup, processes and cleans datasets with Pandas, and visualizes the distribution of nationalities across leagues using React.js. (Click Open API before viewing the project)',
       icon: ChartScatter,
       technologies: ['Python','Pandas', 'React', 'Flask'],
       metrics: ['1M+ Users', '40% Engagement', '<100ms Latency'],
       category: 'Web Extraction',
       featured: false,
       vp: "https://natdistribution.vercel.app/",
-      git: "https://github.com/Emiliobg06/Jugadores_x_Pais"
+      git: "https://github.com/Emiliobg06/Jugadores_x_Pais",
+      api: "https://api-jugadores-8wlm.onrender.com/report"
     }
   ];
 
@@ -166,6 +167,17 @@ const ProjectsSection = () => {
                       View Project
                     </Button>
                     </a>
+                    {project.api && (
+                      <a href={project.api} target="_blank" rel="noopener noreferrer">
+                        <Button 
+                        size="sm"
+                        className="flex-1 bg-gradient-to-r from-cyan-500 to-emerald-400 text-white hover:shadow-md"
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Open API
+                          </Button>
+                          </a>
+                        )}
                     <a href={project.git} target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" size="sm" className="border-gray-300 hover:border-sky-400">
                       <Github className="h-4 w-4" />

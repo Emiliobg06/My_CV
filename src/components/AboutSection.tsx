@@ -5,7 +5,7 @@ const AboutSection = () => {
   const skills = [
     "Python", "R", "SQL","Scikit-learn",
     "Pandas", "NumPy", "Matplotlib", "Seaborn", "Docker", "AWS", "Azure", "Git",
-    "Machine Learning", "Statistical Analysis", "Data Mining", "Frontend Development","React", "Power BI", "Power Apps"
+    "Machine Learning", "Statistical Analysis", "Data Mining", "Frontend Development","React", "Power BI", "Power Apps", "SwiftUI"
   ];
 
   const experiences = [
@@ -35,7 +35,7 @@ const AboutSection = () => {
               About Me
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              I am a passionate computer scientist with a year of experience with projects in machine learning, data analysis, 
+              I am a passionate computer science student with a year of experience with projects in machine learning, data analysis, 
               and software development. I have some other projects done with community service, scholarships and school projects.
             </p>
           </div>

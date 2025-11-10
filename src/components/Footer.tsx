@@ -14,8 +14,8 @@ const Footer = () => {
               DataSci Portfolio
             </h3>
             <p className="text-secondary-foreground/80 leading-relaxed">
-              Transforming data into actionable insights through innovative 
-              machine learning solutions and advanced analytics.
+              For more information, feel free to contact me via email or LinkedIn.
+              You can also reach me directly at +52 81 1634 5676.
             </p>
           </div>
 
