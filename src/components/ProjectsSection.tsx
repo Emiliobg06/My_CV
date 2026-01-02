@@ -3,15 +3,34 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLink, Github, BarChart3, ChartScatter, TrendingUp, Dice5 } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const ProjectsSection = () => {
-  const projects = [
+  const { lang, toggleLang } = useLanguage();
+
+  const contenido = {
+    en: {
+      title: "Featured projects",
+      desc: "A showcase of my data science projects demonstrating expertise in machine learning, statistical modeling, and full-stack development.",
+      proj: "View project",
+      api: "Open API",
+      git: "View all projects on GitHub"
+    },
+
+    es: {
+      title: "Proyectos destacados",
+      desc: "Algunos de mis proyectos de ciencia de datos que muestran mi experiencia en aprendizaje de máquina, modelado estadístico y desarrollo full-stack.",
+      proj: "Ver proyecto",
+      api: "Despertar API",
+      git: "Ver todos los proyectos en GitHub"
+    }
+  }
+  const projectsen = [
     {
       title: 'NLP Research Project',
       description: 'A scholarship service I participated in during my third semester, where I learned how to do Multilabel Classification predictions with Scikitlearn in Python. The goal was to predict professor evaluation outcomes at ITESM based on student feedback data.',
       icon: TrendingUp,
       technologies: ['Python', 'Scikit-learn', 'Pandas','NumPy'],
-      metrics: ['94% Accuracy', '22% Churn Reduction', '50ms Response Time'],
       category: 'Machine Learning',
       featured: false,
       vp: "/NLP for Student Evaluations.pdf",
@@ -21,7 +40,6 @@ const ProjectsSection = () => {
       title: 'Digital Game for Community Service',
       description: 'Developed a React-based digital board game as part of a community service project during Summer 2025, in collaboration with the non-profit organization CIDEPO.',      icon: Dice5,
       technologies: ['React','Vercel'],
-      metrics: ['99.7% Precision', '10K TPS', '$2M Saved'],
       category: 'Front-end Development',
       featured: false,
       vp: "https://pagcidepo.vercel.app/",
@@ -32,8 +50,7 @@ const ProjectsSection = () => {
       description: 'A project I did on my own, where I extracted data from an American Fuel API, using web scraping techniques with Python and BeautifulSoup. I then analyzed and managed the data using Pandas and visualized it with Seaborn and Matplotlib.',
       icon: BarChart3,
       technologies: ['Python', 'Pandas', 'BeautifulSoup', 'Seaborn', 'Matplotlib'],
-      metrics: ['35% Better Accuracy', '12 Regions', 'Real-time Updates'],
-      category: 'Data Visualization',
+      category: 'Data Visualization and Extraction',
       featured: false,
       vp: "/Vehicle Fuel Data Extraction.pdf",
       git: "https://github.com/Emiliobg06/Cars_inv"
@@ -43,7 +60,6 @@ const ProjectsSection = () => {
       description: 'Developed a data extraction and visualization project focused on analyzing player nationalities using data scraped from SofaScore. The project automates data collection with Python and BeautifulSoup, processes and cleans datasets with Pandas, and visualizes the distribution of nationalities across leagues using React.js. (Click Open API before viewing the project)',
       icon: ChartScatter,
       technologies: ['Python','Pandas', 'React', 'Flask'],
-      metrics: ['1M+ Users', '40% Engagement', '<100ms Latency'],
       category: 'Web Extraction',
       featured: false,
       vp: "https://natdistribution.vercel.app/",
@@ -51,6 +67,58 @@ const ProjectsSection = () => {
       api: "https://api-jugadores-8wlm.onrender.com/report"
     }
   ];
+
+  const projectses = [
+    {
+      title: 'Proyecto de Investigación en NLP',
+      description:  'Un servicio becario en el que participé durante mi tercer semestre donde aprendí a hacer un modelo de predicción de clasificación con más de una etiqueta utilizando Scikitlearn en Python. El objetivo era predecir las etiquetas de las evaluaciones de los profesores en el ITESM basándose en los datos de retroalimentación de los estudiantes.',
+      icon: TrendingUp,
+      technologies: ['Python', 'Scikit-learn', 'Pandas','NumPy'],
+      category: 'Aprendizaje de máquina',
+      featured: false,
+      vp: "/NLP for Student Evaluations.pdf",
+      git: "https://github.com/Emiliobg06/NLP_ECOA"
+    },
+    {
+      title: 'Juego Digital para Servicio Social',
+      description: 'Desarrollé un juego digital basado en React como parte de un proyecto de servicio social durante el verano de 2025, en colaboración con la organización CIDEPO.',
+      icon: Dice5,
+      technologies: ['React','Vercel'],
+      category: 'Desarrollo Front-end',
+      featured: false,
+      vp: "https://pagcidepo.vercel.app/",
+      git: "https://github.com/Emiliobg06/pagcidepo"
+    },
+    {
+      title: 'Investigación de Autos',
+      description: 'Un proyecto que hice por mi cuenta donde extraje datos de una API de datos de combustible en Estados Unidos, utilizando técnicas de web scraping y ETL con Python y BeautifulSoup. Luego analicé los datos utilizando Pandas y los visualicé con Seaborn y Matplotlib.',
+      icon: BarChart3,
+      technologies: ['Python', 'Pandas', 'BeautifulSoup', 'Seaborn', 'Matplotlib'],
+      category: 'Visualización y Extracción de Datos',
+      featured: false,
+      vp: "/Vehicle Fuel Data Extraction.pdf",
+      git: "https://github.com/Emiliobg06/Cars_inv"
+    },
+    {
+      title: 'Extracción de Datos de Fútbol',
+      description: 'Otro proyecto que hice por mi cuenta de extracción y visualización de datos enfocado en analizar las nacionalidades de los jugadores usando datos extraídos de SofaScore. El proyecto automatiza la recolección de datos con Python y BeautifulSoup, procesa y limpia conjuntos de datos con Pandas, y visualiza la distribución de nacionalidades a través de ligas nacionales de futbol usando React.js. (Haz clic en Despertar API antes de ver el proyecto)',
+      icon: ChartScatter,
+      technologies: ['Python','Pandas', 'React', 'Flask'],
+      category: 'Extracción Web',
+      featured: false,
+      vp: "https://natdistribution.vercel.app/",
+      git: "https://github.com/Emiliobg06/Jugadores_x_Pais",
+      api: "https://api-jugadores-8wlm.onrender.com/report"
+    }
+  ];
+
+  if (lang === 'en') {
+    var projects = projectsen;
+  } else {
+    var projects = projectses;
+  }
+
+
 
   //const categories = ['All', 'Machine Learning', 'Deep Learning', 'Data Visualization', 'Recommender Systems'];
 
@@ -60,11 +128,10 @@ const ProjectsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-sky-500">
-            Featured Projects
+            {contenido[lang].title}
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            A showcase of my data science projects demonstrating expertise in machine learning, 
-            statistical modeling, and full-stack development.
+            {contenido[lang].desc}
           </p>
         </div>
 
@@ -164,7 +231,7 @@ const ProjectsSection = () => {
                       className="flex-1 bg-gradient-to-r from-sky-500 to-cyan-400 text-white hover:shadow-md"
                     >
                       <ExternalLink className="h-4 w-4 mr-2" />
-                      View Project
+                      {contenido[lang].proj}
                     </Button>
                     </a>
                     {project.api && (
@@ -174,7 +241,7 @@ const ProjectsSection = () => {
                         className="flex-1 bg-gradient-to-r from-cyan-500 to-emerald-400 text-white hover:shadow-md"
                         >
                           <ExternalLink className="h-4 w-4 mr-2" />
-                          Open API
+                          {contenido[lang].api}
                           </Button>
                           </a>
                         )}
@@ -199,7 +266,7 @@ const ProjectsSection = () => {
             variant="outline"
             className="border-sky-400 text-sky-500 hover:bg-sky-500 hover:text-white px-8"
           >
-            View All Projects on GitHub
+            {contenido[lang].git}
             <Github className="ml-2 h-4 w-4" />
           </Button>
           </a>

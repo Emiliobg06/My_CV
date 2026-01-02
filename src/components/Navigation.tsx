@@ -2,10 +2,22 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Home, User, Code } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Navigation = () => {
+  const { lang, toggleLang } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const contenido = {
+    en: {
+      ab: 'About',
+      pr: 'Projects',
+    },
+    es:{
+      ab: 'Acerca de mi',
+      pr: 'Proyectos',
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,8 +30,8 @@ const Navigation = () => {
 
   const navItems = [
     { href: '#home', label: 'Home', icon: Home },
-    { href: '#about', label: 'About', icon: User },
-    { href: '#projects', label: 'Projects', icon: Code },
+    { href: '#about', label: contenido[lang].ab, icon: User },
+    { href: '#projects', label: contenido[lang].pr, icon: Code },
   ];
 
   const scrollToSection = (href: string) => {
@@ -42,7 +54,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="text-2xl font-bold bg-gradient-to-r from-sky-500 to-cyan-400 bg-clip-text text-transparent">
-            DataSci
+            Emilio Barragan
           </div>
 
           {/* Desktop Navigation */}

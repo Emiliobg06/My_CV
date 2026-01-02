@@ -1,8 +1,26 @@
 'use client';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const Footer = () => {
   //const currentYear = new Date().getFullYear();
+  const { lang, toggleLang } = useLanguage();
+  const contenido = {
+    en: {
+      desc: "For more information, feel free to contact me via email or LinkedIn.You can also reach me directly at +52 81 1634 5676.",
+      connect: "Contact Info",
+      quickLinks: "Quick Links",
+      ab: 'About',
+      pr: 'Projects',
+    },
+    es:{
+      desc: "Para más información, no dudes en contactarme por correo o mandarme un mensaje por Linkedin. También puedes contactarme directamente al +52 81 1634 5676.",
+      connect: "Información de Contacto",
+      quickLinks: "Enlaces Rápidos",
+      ab: 'Acerca de mi',
+      pr: 'Proyectos',
+    }
+  }
 
   return (
     <footer className="bg-secondary text-secondary-foreground py-12">
@@ -11,24 +29,23 @@ const Footer = () => {
           {/* Brand Section */}
           <div>
             <h3 className="text-2xl font-bold gradient-text mb-4">
-              DataSci Portfolio
+              Portfolio
             </h3>
             <p className="text-secondary-foreground/80 leading-relaxed">
-              For more information, feel free to contact me via email or LinkedIn.
-              You can also reach me directly at +52 81 1634 5676.
+              {contenido[lang].desc}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-accent">
-              Quick Links
+              {contenido[lang].quickLinks}
             </h4>
             <div className="space-y-2">
               {[
                 { href: '#home', label: 'Home' },
-                { href: '#about', label: 'About' },
-                { href: '#projects', label: 'Projects' }
+                { href: '#about', label: contenido[lang].ab },
+                { href: '#projects', label: contenido[lang].pr }
               ].map((link) => (
                 <a
                   key={link.href}
@@ -51,7 +68,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-accent">
-              Connect
+              {contenido[lang].connect}
             </h4>
             <div className="space-y-3">
               <a 
