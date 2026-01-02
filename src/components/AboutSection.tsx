@@ -58,14 +58,8 @@ const AboutSection = () => {
     }
   };
 
-  if (lang === 'es') {
-    var edu = [educ.es];
-    var experiences = [exp1.es, exp2.es];
-  } else{
-    var edu = [educ.en];
-    var experiences = [exp1.en, exp2.en];
-  }
-
+  const edu = lang === 'es' ? [educ.es] : [educ.en];
+  const experiences = lang === 'es' ? [exp1.es, exp2.es] : [exp1.en, exp2.en];
 
   const contenido = {
     en: {

@@ -112,11 +112,7 @@ const ProjectsSection = () => {
     }
   ];
 
-  if (lang === 'en') {
-    var projects = projectsen;
-  } else {
-    var projects = projectses;
-  }
+  const projects = lang === 'en' ? projectsen : projectses;
 
 
 
