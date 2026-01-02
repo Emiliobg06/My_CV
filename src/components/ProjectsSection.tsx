@@ -6,7 +6,7 @@ import { ExternalLink, Github, BarChart3, ChartScatter, TrendingUp, Dice5 } from
 import { useLanguage } from '@/context/LanguageContext';
 
 const ProjectsSection = () => {
-  const { lang, toggleLang } = useLanguage();
+  const { lang } = useLanguage();
 
   const contenido = {
     en: {

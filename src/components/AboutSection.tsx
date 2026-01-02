@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from '@/context/LanguageContext';
 
 const AboutSection = () => {
-  const { lang, toggleLang } = useLanguage();
+  const { lang } = useLanguage();
   const skills = [
     "Python", "R", "SQL","Scikit-learn",
     "Pandas", "NumPy", "Matplotlib", "Seaborn", "Docker", "AWS", "Azure", "Git",
@@ -28,14 +28,14 @@ const AboutSection = () => {
     en: {
       title: "Data Entry (Temporary)",
       company: "Grupo de Asesores Morales",
-      period: "December 2024-January 2025",
+      period: "December 2024 - January 2025",
       description:
         "Temporary position entering survey data collected at SADM offices.",
     },
     es: {
       title: "Capturista de Datos (Temporal)",
       company: "Grupo de Asesores Morales",
-      period: "Diciembre 2024-Enero 2025",
+      period: "Diciembre 2024 - Enero 2025",
       description:
       "Posición temporal en la que capturé datos de encuestas recolectadas en oficinas de agua y drenaje.",
     }
@@ -45,14 +45,14 @@ const AboutSection = () => {
     en: {
       title: "Bilingual customer service agent",
       company: "Teleperformance",
-      period: "June 2023-August 2023",
+      period: "June 2023 - August 2023",
       description:
         "A job where I developed strong communicational skills and abilities to work as a customer service agent for an internet company.",
     },
     es: {
       title: "Agente de servicio al cliente bilingüe",
       company: "Teleperformance",
-      period: "Junio 2023-Agosto 2023",
+      period: "Junio 2023 - Agosto 2023",
       description:
       "Un trabajo en el que desarrollé habilidades de comunicación solidas para trabajar como agente de servicio al cliente para una empresa de internet.",
     }

@@ -4,7 +4,7 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const Footer = () => {
   //const currentYear = new Date().getFullYear();
-  const { lang, toggleLang } = useLanguage();
+  const { lang } = useLanguage();
   const contenido = {
     en: {
       desc: "For more information, feel free to contact me via email or LinkedIn.You can also reach me directly at +52 81 1634 5676.",

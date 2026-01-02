@@ -5,7 +5,7 @@ import { Menu, X, Home, User, Code } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const Navigation = () => {
-  const { lang, toggleLang } = useLanguage();
+  const { lang } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const contenido = {
